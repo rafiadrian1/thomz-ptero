@@ -226,7 +226,22 @@ uninstall_theme() {
   echo -e "${BLUE}[+]                    DELETE THEME                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  bash <(curl https://raw.githubusercontent.com/gitfdil1248/thema/main/repair.sh)
+  
+  bash <(curl -s https://pterodactyl-installer.se) <<EOF
+y
+y
+y
+subdo
+y
+user
+pw
+y
+nodesubdo
+y
+admin@gmail.com
+y
+EOF
+
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "${GREEN}[+]                 DELETE THEME SUKSES             [+]${NC}"
@@ -452,21 +467,20 @@ auto_installer() {
 read -p "Masukkan Nama " nama
 read -p "Masukkan Password " pw
 read -p "Masukkan Subdomain " subdo
-read -p "Masukkan NodeSubdomain " nodesubdo
 
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
 2
 \n
 \n
-pw
+$pw
 Asia/Jakarta
 admin@gmail.com
 admin@gmail.com
-nama
-nama
-nama
-pw
-subdo
+$nama
+$nama
+$nama
+$pw
+$subdo
 y
 y
 y
