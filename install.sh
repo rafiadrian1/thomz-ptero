@@ -62,7 +62,7 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "fadhostgagalmoveon" ]; then
+  if [ "$USER_TOKEN" = "thomvelz" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
     echo -e "${GREEN}Buy dulu Gih Ke Fadhost${NC}"
@@ -472,7 +472,8 @@ y
 y
 y
 yes
-A
+a
+bash <(curl -s https://pterodactyl-installer.se) <<EOF
 y
 y
 y
