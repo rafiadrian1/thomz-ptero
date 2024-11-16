@@ -467,7 +467,7 @@ auto_installer() {
 read -p "Masukkan Subdomain " subdo
 
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
-2
+0
 \n
 \n
 admin
