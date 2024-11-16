@@ -62,7 +62,7 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "thomvelz" ]; then
+  if [ "$USER_TOKEN" = "fadhostgagalmoveon" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
     echo -e "${GREEN}Buy dulu Gih Ke Fadhost${NC}"
@@ -226,22 +226,7 @@ uninstall_theme() {
   echo -e "${BLUE}[+]                    DELETE THEME                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  
-  bash <(curl -s https://pterodactyl-installer.se) <<EOF
-y
-y
-y
-subdo
-y
-user
-pw
-y
-nodesubdo
-y
-admin@gmail.com
-y
-EOF
-
+  bash <(curl https://raw.githubusercontent.com/gitfdil1248/thema/main/repair.sh)
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "${GREEN}[+]                 DELETE THEME SUKSES             [+]${NC}"
@@ -464,34 +449,48 @@ auto_installer() {
   echo -e "${GREEN}[+]            AUTO INSTALL PANEL + WINGS           [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-read Domain
+read -p "Masukkan Nama " nama
+read -p "Masukkan Password " pw
+read -p "Masukkan Subdomain " subdo
+read -p "Masukkan NodeSubdomain " nodesubdo
 
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
-0
-admin
-admin
-admin
+2
+\n
+\n
+pw
 Asia/Jakarta
 admin@gmail.com
 admin@gmail.com
-admin
-admin
-admin
-admin
-$Domain
+nama
+nama
+nama
+pw
+subdo
 y
 y
 y
 y
 yes
 A
-
+y
+y
+y
+subdo
+y
+user
+pw
+y
+nodesubdo
+y
+admin@gmail.com
+y
 EOF
 
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                  AUTO INSTALL SUKSES             [+]${NC}"
+  echo -e "${GREEN}[+]                  AUTO INSTALL SUKSE             [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
