@@ -464,12 +464,12 @@ auto_installer() {
   echo -e "${GREEN}[+]            AUTO INSTALL PANEL + WINGS           [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-read -p "Masukkan Subdomain " subdo
+read Domain
 
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
 0
-\n
-\n
+admin
+admin
 admin
 Asia/Jakarta
 admin@gmail.com
@@ -478,13 +478,13 @@ admin
 admin
 admin
 admin
-$subdo
+$Domain
 y
 y
 y
 y
 yes
-a
+A
 EOF
 
 
