@@ -456,17 +456,17 @@ read -p "Masukkan NodeSubdomain " nodesubdo
 
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
 2
-\n
-\n
-pw
+admin
+admin
+$pw
 Asia/Jakarta
 admin@gmail.com
 admin@gmail.com
-nama
-nama
-nama
-pw
-subdo
+$nama
+$nama
+$nama
+$pw
+$subdo
 y
 y
 y
@@ -476,12 +476,12 @@ A
 y
 y
 y
-subdo
+$subdo
 y
 user
 pw
 y
-nodesubdo
+$nodesubdo
 y
 admin@gmail.com
 y
