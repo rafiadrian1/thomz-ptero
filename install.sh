@@ -476,9 +476,9 @@ A
 y
 y
 y
-$subdo
+\n
 y
-user
+\n
 pw
 y
 $nodesubdo
